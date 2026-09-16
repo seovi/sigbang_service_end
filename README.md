@@ -29,7 +29,7 @@ curl -I http://localhost:3100/recipe/123
 | 변수 | 기본값 | 용도 |
 | --- | --- | --- |
 | SERVICE_NAME | 식방 | 브랜드명 |
-| SERVICE_END_DATE | 2026년 XX월 XX일 | 종료일 표시 문자열 |
+| SERVICE_END_DATE | 2026년 9월 16일 | 종료일 표시 문자열 |
 | CONTACT_EMAIL | contact.sigbang@gmail.com | 문의 이메일; 환경 변수로 변경 가능 |
 | SERVICE_END_PAGE_NOINDEX | false | true일 때 홈 noindex |
 
