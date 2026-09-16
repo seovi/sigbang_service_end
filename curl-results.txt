@@ -1,0 +1,90 @@
+curl.exe -I http://localhost:3100/
+HTTP/1.1 200 OK
+Vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+x-nextjs-cache: HIT
+x-nextjs-prerender: 1
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+Cache-Control: s-maxage=31536000
+ETag: "9qms3tei8r60l"
+Content-Type: text/html; charset=utf-8
+Content-Length: 9035
+Date: Wed, 16 Sep 2026 00:55:38 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+curl.exe -I http://localhost:3100/recipe/123
+HTTP/1.1 410 Gone
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+cache-control: public, max-age=0, s-maxage=3600
+content-type: text/html; charset=utf-8
+x-content-type-options: nosniff
+x-robots-tag: noindex, follow
+Date: Wed, 16 Sep 2026 00:55:38 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+curl.exe -I http://localhost:3100/menu/test
+HTTP/1.1 410 Gone
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+cache-control: public, max-age=0, s-maxage=3600
+content-type: text/html; charset=utf-8
+x-content-type-options: nosniff
+x-robots-tag: noindex, follow
+Date: Wed, 16 Sep 2026 00:55:38 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+curl.exe -I http://localhost:3100/unknown-old-content
+HTTP/1.1 410 Gone
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+cache-control: public, max-age=0, s-maxage=3600
+content-type: text/html; charset=utf-8
+x-content-type-options: nosniff
+x-robots-tag: noindex, follow
+Date: Wed, 16 Sep 2026 00:55:38 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+curl.exe -I http://localhost:3100/robots.txt
+HTTP/1.1 200 OK
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-nextjs-cache: HIT
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+Date: Wed, 16 Sep 2026 00:55:38 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+curl.exe -I http://localhost:3100/gone
+HTTP/1.1 410 Gone
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+cache-control: public, max-age=0, s-maxage=3600
+content-type: text/html; charset=utf-8
+x-content-type-options: nosniff
+x-robots-tag: noindex, follow
+Date: Wed, 16 Sep 2026 00:55:38 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+curl.exe -I http://localhost:3100/sitemap.xml
+HTTP/1.1 410 Gone
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+cache-control: public, max-age=0, s-maxage=3600
+content-type: text/html; charset=utf-8
+x-content-type-options: nosniff
+x-robots-tag: noindex, follow
+Date: Wed, 16 Sep 2026 00:55:38 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+curl.exe -I http://localhost:3100/recipe/123/
+HTTP/1.1 410 Gone
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+cache-control: public, max-age=0, s-maxage=3600
+content-type: text/html; charset=utf-8
+x-content-type-options: nosniff
+x-robots-tag: noindex, follow
+Date: Wed, 16 Sep 2026 00:55:39 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
