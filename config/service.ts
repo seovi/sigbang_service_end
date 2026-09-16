@@ -19,7 +19,7 @@ export const service = {
     `${SERVICE_NAME} 서비스를 이용해 주셔서 감사합니다.`,
     `${SERVICE_NAME}은 ${SERVICE_END_DATE}부로 서비스를 종료하였습니다.`,
     `그동안 ${SERVICE_NAME}을 이용해 주신 모든 분께 진심으로 감사드립니다.`,
-    "회원 정보 및 개인정보는 관련 법령 및 개인정보처리방침에 따라 안전하게 처리됩니다.",
+    "회원 정보 및 개인정보는 아직 삭제되지 않았습니다. 자세한 내용과 문의 방법은 개인정보 처리 안내에서 확인해 주세요.",
     "서비스 종료와 관련된 문의는 아래 이메일을 이용해 주세요.",
   ],
   contactLabel: "문의",
@@ -29,4 +29,5 @@ export const service = {
   goneTitle: "페이지를 더 이상 제공하지 않습니다.",
   goneDescription: `${SERVICE_NAME} 서비스가 종료되어 기존 콘텐츠는 더 이상 제공되지 않습니다.`,
   homeLink: "서비스 종료 안내 보기",
+  privacyLink: "개인정보 처리 안내 및 기존 방침",
 };

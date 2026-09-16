@@ -38,6 +38,7 @@ curl -I http://localhost:3100/recipe/123
 ## HTTP 및 색인 정책
 
 - `/`: 정적 홈, 200. 기본 index/follow. title, description, 최소 Open Graph는 `config/metadata.ts`.
+- `/legal/privacy`: 정적 페이지, 200, noindex/follow. 홈과 410 페이지 푸터에서 연결합니다. 현재 개인정보 미삭제 사실 및 문의 안내와 기존 방침을 구분하여 제공합니다. 운영 당시 원문은 `components/ArchivedPrivacyPolicy.tsx`, 현재 안내는 `config/privacy.ts`에서 관리합니다. 파기 일정·법정 보관 항목은 운영자가 확인하기 전에는 임의로 기재하지 않습니다. 실제 파기 후 홈의 `config/service.ts`와 현재 안내를 함께 갱신하고 재배포하세요. 방침 게시로 DB·파일·백업이 삭제되지는 않습니다.
 - `/robots.txt`: 200, `User-Agent: *`, `Allow: /`. 삭제 URL 크롤링 허용, sitemap 미기재.
 - 제공하는 `/favicon.svg`, `/notice.css`와 실제 `/_next/*` 자산: 200.
 - 나머지 서비스 URL: `app/[...path]/route.ts`에서 `Response`의 status를 **410**으로 직접 지정. GET/HEAD 및 일반 HTTP 메서드에 동일 정책. 별도 백엔드/미들웨어 없음.
@@ -84,3 +85,5 @@ curl -I http://localhost:3100/recipe/123
 - 실제 Vercel 배포/도메인 전환은 미수행. 배포 후 최종 도메인에서 같은 검증 필요.
 
 생성 파일: `.gitignore`, `.env.example`, `package.json`, `package-lock.json`, `tsconfig.json`, `next-env.d.ts`, `next.config.ts`, `app/layout.tsx`, `app/page.tsx`, `app/robots.ts`, `app/[...path]/route.ts`, `components/ServiceEnded.tsx`, `config/service.ts`, `config/metadata.ts`, `public/notice.css`, `public/favicon.svg`, `scripts/check-http.mjs`, `curl-results.txt`, `README.md`. 기존 파일 변경 없음.
+
+개인정보 안내 추가 후 프로덕션 빌드 및 19개 경로 GET/HEAD 38건을 검증합니다. `/legal/privacy`의 200 응답, 미삭제 안내, 기존 방침 본문, noindex 및 현재 문의 이메일을 검사하며 기존 콘텐츠 410 검증도 유지합니다.

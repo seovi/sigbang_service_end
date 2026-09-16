@@ -27,6 +27,7 @@ function gone(request: Request): Response {
 <p class="message">${escapeHtml(service.goneDescription)}</p>
 <a class="button" href="/">${escapeHtml(service.homeLink)}</a>
 </main><footer><p>${escapeHtml(service.copyright)}</p>
+<p><a href="/legal/privacy">${escapeHtml(service.privacyLink)}</a></p>
 <p>${escapeHtml(service.contactLabel)}: ${contact}</p></footer></div></body></html>`;
   return new Response(request.method === "HEAD" ? null : html, {
     status: 410,

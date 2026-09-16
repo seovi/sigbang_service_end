@@ -22,6 +22,7 @@ export function ServiceEnded() {
         <p className="contact">{service.contactLabel}: <Contact /></p>
       </main>
       <footer>
+        <p><a href="/legal/privacy">{service.privacyLink}</a></p>
         <p>{service.copyright}</p>
         <p>{service.contactLabel}: <Contact /></p>
       </footer>
