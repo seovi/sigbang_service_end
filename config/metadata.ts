@@ -12,5 +12,5 @@ export const serviceMetadata: Metadata = {
     locale: "ko_KR",
     type: "website",
   },
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/brand-icon.png", apple: "/brand-icon.png" },
 };

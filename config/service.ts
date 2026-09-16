@@ -1,7 +1,7 @@
 export const SERVICE_NAME = process.env.SERVICE_NAME?.trim() || "식방";
 export const SERVICE_END_DATE =
   process.env.SERVICE_END_DATE?.trim() || "2026년 XX월 XX일";
-export const CONTACT_EMAIL = process.env.CONTACT_EMAIL?.trim() || "";
+export const CONTACT_EMAIL = process.env.CONTACT_EMAIL?.trim() || "contact.sigbang@gmail.com";
 export const SERVICE_END_PAGE_NOINDEX =
   process.env.SERVICE_END_PAGE_NOINDEX === "true";
 

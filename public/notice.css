@@ -1,18 +1,19 @@
-:root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #263831; background: #f4f6f3; }
+:root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #29251e; background: #f8f5ed; }
 * { box-sizing: border-box; }
 body { margin: 0; }
 .shell { width: min(100%, 760px); margin: 0 auto; padding: clamp(24px, 7vw, 88px) 20px 32px; }
-.card { background: #fff; border: 1px solid #dce3dc; border-radius: 16px; padding: clamp(24px, 6vw, 56px); }
-.brand { margin: 0 0 44px; font-size: 25px; font-weight: 800; letter-spacing: -.04em; color: #21543e; }
-.eyebrow { color: #496454; font-size: 14px; font-weight: 600; margin: 0 0 12px; }
+.card { background: #fffefa; border: 1px solid #e6dfcf; border-top: 5px solid #ffca20; border-radius: 20px; padding: clamp(24px, 6vw, 56px); box-shadow: 0 12px 40px #45320d06; }
+.brand { display: flex; align-items: center; gap: 12px; margin: 0 0 40px; font-size: 27px; font-weight: 800; letter-spacing: -.04em; color: #191813; }
+.brand img { display: block; flex: 0 0 auto; object-fit: contain; }
+.eyebrow { display: inline-block; color: #6b5118; background: #fff2c6; border-radius: 6px; padding: 5px 10px; font-size: 14px; font-weight: 600; margin: 0 0 16px; }
 h1 { font-size: clamp(26px, 5vw, 34px); line-height: 1.4; letter-spacing: -.045em; margin: 0 0 28px; word-break: keep-all; overflow-wrap: anywhere; }
 .message { font-size: 17px; line-height: 1.85; word-break: keep-all; overflow-wrap: anywhere; }
 .message p { margin: 0 0 20px; }
-.contact { border-top: 1px solid #e0e5df; padding-top: 24px; margin: 28px 0 0; font-size: 16px; line-height: 1.8; }
-a { color: #21543e; text-underline-offset: 4px; overflow-wrap: anywhere; }
-a:hover { color: #123626; }
-a:focus-visible { outline: 3px solid #21543e; outline-offset: 5px; border-radius: 3px; }
-.button { display: inline-block; background: #21543e; color: #fff; padding: 13px 20px; margin-top: 16px; border-radius: 8px; line-height: 1.5; text-decoration: none; font-weight: 600; }
-.button:hover { background: #173e2d; color: #fff; }
-footer { text-align: center; color: #526158; font-size: 14px; line-height: 1.7; padding: 22px 8px 0; overflow-wrap: anywhere; }
+.contact { background: #f7f2e7; border: 1px solid #ece3ce; border-radius: 10px; padding: 18px 20px; margin: 28px 0 0; font-size: 16px; line-height: 1.8; }
+a { color: #654c12; text-underline-offset: 4px; overflow-wrap: anywhere; }
+a:hover { color: #382b0d; }
+a:focus-visible { outline: 3px solid #755710; outline-offset: 5px; border-radius: 3px; }
+.button { display: inline-block; background: #302b20; color: #fff; padding: 13px 20px; margin-top: 16px; border-radius: 8px; line-height: 1.5; text-decoration: none; font-weight: 600; }
+.button:hover { background: #17140e; color: #fff; }
+footer { text-align: center; color: #665f51; font-size: 14px; line-height: 1.7; padding: 22px 8px 0; overflow-wrap: anywhere; }
 footer p { margin: 4px 0; }

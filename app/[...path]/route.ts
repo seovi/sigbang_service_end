@@ -20,9 +20,9 @@ function gone(request: Request): Response {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeHtml(service.goneTitle)} | ${escapeHtml(service.name)}</title>
 <meta name="robots" content="noindex, follow">
-<link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/notice.css">
+<link rel="icon" href="/brand-icon.png"><link rel="stylesheet" href="/notice.css">
 </head><body><div class="shell"><main class="card">
-<p class="brand">${escapeHtml(service.name)}</p><p class="eyebrow">410 Gone</p>
+<div class="brand"><img src="/brand-logo.png" width="56" height="56" alt=""><span>${escapeHtml(service.name)}</span></div><p class="eyebrow">410 Gone</p>
 <h1>${escapeHtml(service.goneTitle)}</h1>
 <p class="message">${escapeHtml(service.goneDescription)}</p>
 <a class="button" href="/">${escapeHtml(service.homeLink)}</a>

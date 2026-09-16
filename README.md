@@ -30,7 +30,7 @@ curl -I http://localhost:3100/recipe/123
 | --- | --- | --- |
 | SERVICE_NAME | 식방 | 브랜드명 |
 | SERVICE_END_DATE | 2026년 XX월 XX일 | 종료일 표시 문자열 |
-| CONTACT_EMAIL | 빈 값 | 실제 문의 이메일; 미설정이면 준비 중 안내 |
+| CONTACT_EMAIL | contact.sigbang@gmail.com | 문의 이메일; 환경 변수로 변경 가능 |
 | SERVICE_END_PAGE_NOINDEX | false | true일 때 홈 noindex |
 
 설정은 `config/service.ts`에 모여 있습니다. 전체 본문/버튼/푸터 문구도 이 파일에서 수정합니다. 환경 변수만 바꾸면 코드 수정은 필요 없지만 **홈이 정적 페이지이므로 변경 후 반드시 재배포**해야 합니다. 배포 전에 종료일과 수신 가능한 실제 문의 이메일을 확정하세요. 개인정보 처리 안내는 실제 처리 방침과 일치하는지 운영자가 확인해야 합니다.
@@ -62,6 +62,8 @@ curl -I http://localhost:3100/recipe/123
 실제 Vercel 환경의 응답은 배포 후 다시 확인해야 합니다. 색인 제거 시점은 검색엔진 재크롤링 주기에 따라 달라집니다. Next.js 보안 업데이트는 정기적으로 확인하세요.
 
 ## 외부 의존성과 비밀정보
+
+기존 프론트의 `public/logo.png`, `public/icon.png`를 각각 `public/brand-logo.png`, `public/brand-icon.png`로 복사해 사용합니다. 홈과 410 안내에 로고를 표시하며 파비콘/Apple 아이콘에도 기존 브랜드 아이콘을 적용합니다. 모든 이미지는 로컬 정적 자산이며 외부 호출이나 추가 라이브러리는 없습니다.
 
 기존 React Query, Axios, 이미지 편집 라이브러리, Zod, Tailwind, 외부 폰트 패키지를 가져오지 않았습니다. API, DB, Supabase, 로그인, 세션, Analytics, 광고, Push 및 외부 폰트/이미지 호출이 없습니다. 기존 `.env`나 비밀정보를 복사하지 않습니다. 기존 API/DB/클라우드 자원의 실제 종료와 키 폐기는 이 프론트엔드 생성과 별도 작업입니다.
 

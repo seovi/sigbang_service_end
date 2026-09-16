@@ -10,7 +10,10 @@ export function ServiceEnded() {
   return (
     <div className="shell">
       <main className="card">
-        <p className="brand">{service.name}</p>
+        <div className="brand">
+          <img src="/brand-logo.png" width="56" height="56" alt="" />
+          <span>{service.name}</span>
+        </div>
         <p className="eyebrow">{service.label}</p>
         <h1>{service.title}</h1>
         <div className="message">
