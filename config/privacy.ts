@@ -1,4 +1,4 @@
-import { SERVICE_END_DATE } from "./service";
+import { PERSONAL_DATA_DELETION_NOTICE, SERVICE_END_DATE } from "./service";
 
 // Update only after the actual data handling status is confirmed.
 // A notice does not perform database, storage, or backup deletion.
@@ -9,8 +9,7 @@ export const privacy = {
   paragraphs: [
     `식방은 ${SERVICE_END_DATE}부로 서비스를 종료하였습니다.`,
     "현재 회원 정보 및 개인정보는 아직 삭제되지 않았습니다. 이 안내는 개인정보 파기 완료를 의미하지 않습니다.",
-    "구체적인 파기 일정과 법령상 보관이 필요한 정보의 유무·항목·근거·기간은 이 안내에 아직 확정하여 게시하지 않았습니다. 확인된 사항은 이 페이지에 안내하겠습니다.",
-    "서비스 종료로 불필요해진 개인정보는 지체 없이 파기해야 합니다. 다른 법령에 따라 보존해야 하는 정보가 있는 경우에는 해당 정보만 분리하여 보관해야 합니다.",
+    PERSONAL_DATA_DELETION_NOTICE,
     "개인정보 열람·정정·삭제·처리정지 요청 및 종료 관련 문의는 아래 이메일로 보내 주세요. 종료된 앱의 고객센터 대신 현재 문의 이메일을 이용해 주세요.",
   ],
   archiveTitle: "서비스 운영 당시 개인정보처리방침",
